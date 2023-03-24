@@ -2,7 +2,7 @@
 
 # Required System files
 CURL_EXE := $(shell which curl)
-DOCKER_COMPOSE_EXE := $(shell which docker-compose)
+DOCKER_COMPOSE_EXE := $(shell which docker) compose
 ROOT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 

@@ -49,8 +49,9 @@ services:
       target: server
     container_name: arranger-server.local
     environment:
+      ENABLE_ADMIN: '${ENABLE_ADMIN:-true}'
       ENABLE_LOGS: '${ENABLE_LOGS:-false}'
-      ES_HOST: '${ES_HOST:-http://host.docker.internal:9200}'
+      ES_HOST: '${ES_HOST:-http://arranger-elasticsearch-1:9200}'
       ES_USER: '$ES_USER'
       ES_PASS: '$ES_PASS'
     ports:
